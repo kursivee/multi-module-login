@@ -3,7 +3,7 @@ package com.kursivee.login.app
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.kursivee.login.R
-import com.kursivee.login.view.login.LoginFragment
+import com.kursivee.login.view.LoginFragment
 
 class AppActivity : AppCompatActivity() {
 

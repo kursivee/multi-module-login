@@ -1,4 +1,4 @@
-package com.kursivee.login.view.login
+package com.kursivee.login.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
