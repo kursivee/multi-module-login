@@ -8,8 +8,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import com.kursivee.core.view.ext.coreComponent
 import com.kursivee.login.R
-import com.kursivee.core.app.ext.coreComponent
 import com.kursivee.login.view.di.DaggerViewComponent
 import com.kursivee.login.view.di.ViewComponent
 import com.kursivee.login.view.viewmodel.LoginViewModel
@@ -43,6 +43,8 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         return inflater.inflate(R.layout.login_fragment, container, false).also {
+            // Double calling to check if caching is called
+            viewModel.authenticate("", "").toString()
             it.findViewById<TextView>(R.id.tv_message).text = viewModel.authenticate("", "").toString()
         }
     }

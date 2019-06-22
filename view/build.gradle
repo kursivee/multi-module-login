@@ -36,8 +36,8 @@ dependencies {
 
     implementation project(":domain")
     implementation project(":data")
-    implementation project(':core-app')
     implementation project(":core-view")
+    implementation project(":core-domain")
 
     implementation 'com.google.dagger:dagger:2.23.2'
     kapt 'com.google.dagger:dagger-compiler:2.23.2'
