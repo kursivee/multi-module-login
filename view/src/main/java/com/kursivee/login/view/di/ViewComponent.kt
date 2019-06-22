@@ -1,6 +1,6 @@
 package com.kursivee.login.view.di
 
-import com.kursivee.core.di.CoreComponent
+import com.kursivee.core.app.di.CoreComponent
 import com.kursivee.login.view.login.LoginFragment
 import com.kursivee.login.view.viewmodel.di.ViewModelModule
 import dagger.Component

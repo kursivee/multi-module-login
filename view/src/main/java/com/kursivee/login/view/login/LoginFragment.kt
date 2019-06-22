@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.kursivee.login.R
-import com.kursivee.login.app.ext.coreComponent
+import com.kursivee.core.app.ext.coreComponent
 import com.kursivee.login.view.di.DaggerViewComponent
 import com.kursivee.login.view.di.ViewComponent
 import com.kursivee.login.view.viewmodel.LoginViewModel

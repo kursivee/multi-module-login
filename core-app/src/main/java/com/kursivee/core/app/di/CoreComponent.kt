@@ -1,4 +1,4 @@
-package com.kursivee.core.di
+package com.kursivee.core.app.di
 
 import dagger.Component
 
