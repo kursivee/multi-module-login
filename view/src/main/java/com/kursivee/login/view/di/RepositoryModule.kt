@@ -6,7 +6,7 @@ import dagger.Binds
 import dagger.Module
 
 @Module
-abstract class RepositoryModule {
+internal abstract class RepositoryModule {
     @Binds
     @FeatureScope
     abstract fun provideAuthenticationRepository(authenticationRepository: AuthenticationRepository): Repository

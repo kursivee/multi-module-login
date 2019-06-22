@@ -14,6 +14,6 @@ import dagger.Component
     ]
 )
 @FeatureScope
-interface ViewComponent {
+internal interface ViewComponent {
     fun inject(loginFragment: LoginFragment)
 }

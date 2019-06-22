@@ -8,7 +8,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-object UseCaseModule {
+internal object UseCaseModule {
     @Provides
     @JvmStatic
     @FeatureScope

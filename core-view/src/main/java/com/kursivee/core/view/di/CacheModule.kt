@@ -6,7 +6,7 @@ import dagger.Binds
 import dagger.Module
 
 @Module
-abstract class CacheModule {
+internal abstract class CacheModule {
 
     @Binds
     @CoreScope
