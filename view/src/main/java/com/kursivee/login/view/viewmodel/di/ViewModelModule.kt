@@ -2,8 +2,8 @@ package com.kursivee.login.view.viewmodel.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.kursivee.login.core.viewmodel.ViewModelFactory
-import com.kursivee.login.core.viewmodel.di.ViewModelKey
+import com.kursivee.core.view.viewmodel.ViewModelFactory
+import com.kursivee.core.view.viewmodel.di.ViewModelKey
 import com.kursivee.login.view.di.FeatureScope
 import com.kursivee.login.view.viewmodel.LoginViewModel
 import dagger.Binds

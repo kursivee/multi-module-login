@@ -1,4 +1,4 @@
-package com.kursivee.login.core.viewmodel.di
+package com.kursivee.core.view.viewmodel.di
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

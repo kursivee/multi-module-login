@@ -1,1 +1,1 @@
-include ':view', ':domain', ':data'
+include ':view', ':domain', ':data', ':core-view', ':core'

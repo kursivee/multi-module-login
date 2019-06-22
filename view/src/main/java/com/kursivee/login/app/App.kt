@@ -1,8 +1,8 @@
 package com.kursivee.login.app
 
 import android.app.Application
-import com.kursivee.login.core.di.CoreComponent
-import com.kursivee.login.core.di.DaggerCoreComponent
+import com.kursivee.core.di.CoreComponent
+import com.kursivee.core.di.DaggerCoreComponent
 
 class App: Application() {
     lateinit var component: CoreComponent

@@ -1,4 +1,4 @@
-package com.kursivee.login.core.viewmodel
+package com.kursivee.core.view.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
