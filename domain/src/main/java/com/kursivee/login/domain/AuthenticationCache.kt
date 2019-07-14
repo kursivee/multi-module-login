@@ -3,7 +3,7 @@ package com.kursivee.login.domain
 import com.kursivee.core.domain.Cache
 import com.kursivee.login.domain.model.AuthenticationResponse
 
-class CacheUseCase(private val cache: Cache<Any, Any>) {
+class AuthenticationCache(private val cache: Cache<Any, Any>) {
     fun put(response: AuthenticationResponse) {
         cache.put(AuthenticationResponse::class.java.simpleName, response)
     }

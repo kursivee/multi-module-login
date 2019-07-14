@@ -2,14 +2,14 @@ package com.kursivee.login.data.repository
 
 import android.util.Log
 import com.kursivee.core.domain.Either
-import com.kursivee.login.domain.CacheUseCase
+import com.kursivee.login.domain.AuthenticationCache
 import com.kursivee.core.domain.Error
 import com.kursivee.login.domain.Repository
 import com.kursivee.login.domain.model.AuthenticationResponse
 import javax.inject.Inject
 
 class AuthenticationRepository @Inject constructor(
-    private val cache: CacheUseCase
+    private val cache: AuthenticationCache
 ): Repository {
     private val tag = AuthenticationRepository::class.java.simpleName
 

@@ -10,7 +10,8 @@ import dagger.Component
     modules = [
         ViewModelModule::class,
         RepositoryModule::class,
-        UseCaseModule::class
+        UseCaseModule::class,
+        CacheModule::class
     ]
 )
 @FeatureScope
