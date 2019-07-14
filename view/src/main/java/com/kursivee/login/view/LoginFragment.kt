@@ -14,6 +14,7 @@ import com.kursivee.login.R
 import com.kursivee.login.view.di.DaggerViewComponent
 import com.kursivee.login.view.di.ViewComponent
 import com.kursivee.login.view.viewmodel.LoginViewModel
+import kotlinx.android.synthetic.main.login_fragment.*
 import javax.inject.Inject
 
 class LoginFragment : Fragment() {
@@ -47,7 +48,13 @@ class LoginFragment : Fragment() {
             viewModel.success.observe(this, Observer {
                 view.findViewById<TextView>(R.id.tv_message).text = it.toString()
             })
-            viewModel.authenticate("user2", "wererser").toString()
+        }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        btn_login.setOnClickListener {
+            viewModel.authenticate("user2", "wererer").toString()
         }
     }
 
