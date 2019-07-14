@@ -1,5 +1,6 @@
 package com.kursivee.login.domain.model
 
 data class AuthenticationResponse(
-    val success: Boolean
+    val token: String,
+    val refreshToken: String
 )

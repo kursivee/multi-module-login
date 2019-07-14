@@ -6,7 +6,7 @@ import com.kursivee.core.domain.Error
 import com.kursivee.login.data.api.AuthenticationApi
 import com.kursivee.login.data.cache.AuthCache
 import com.kursivee.login.domain.Repository
-import com.kursivee.login.domain.model.AuthResp
+import com.kursivee.login.domain.model.AuthenticationResponse
 import com.kursivee.login.domain.model.AuthenticationRequest
 import javax.inject.Inject
 
@@ -16,7 +16,7 @@ class AuthenticationRepository @Inject constructor(
 ): Repository {
     private val tag = AuthenticationRepository::class.java.simpleName
 
-    override suspend fun realAuth(username: String, password: String): Either<Error, AuthResp> {
+    override suspend fun realAuth(username: String, password: String): Either<Error, AuthenticationResponse> {
         authCache.get()?.let {
             Log.d(tag, "CACHED RESPONSE")
             return Either.Success(it)
