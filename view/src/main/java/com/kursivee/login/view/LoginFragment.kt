@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.kursivee.core.view.ext.coreComponent
@@ -42,10 +43,13 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.login_fragment, container, false).also {
+        return inflater.inflate(R.layout.login_fragment, container, false).also { view ->
+            viewModel.success.observe(this, Observer {
+                view.findViewById<TextView>(R.id.tv_message).text = it.toString()
+            })
             // Double calling to check if caching is called
             viewModel.authenticate("", "").toString()
-            it.findViewById<TextView>(R.id.tv_message).text = viewModel.authenticate("", "").toString()
+            viewModel.authenticate("", "").toString()
         }
     }
 
