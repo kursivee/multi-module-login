@@ -4,7 +4,7 @@ import android.util.Log
 import com.kursivee.core.domain.Either
 import com.kursivee.core.domain.Error
 import com.kursivee.login.data.api.AuthenticationApi
-import com.kursivee.login.data.cache.AuthCache
+import com.kursivee.login.data.cache.AuthenticationCache
 import com.kursivee.login.domain.Repository
 import com.kursivee.login.domain.model.AuthenticationResponse
 import com.kursivee.login.domain.model.AuthenticationRequest
@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 class AuthenticationRepository @Inject constructor(
     private val api: AuthenticationApi,
-    private val authCache: AuthCache
+    private val authCache: AuthenticationCache
 ): Repository {
     private val tag = AuthenticationRepository::class.java.simpleName
 
