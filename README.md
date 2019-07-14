@@ -6,6 +6,7 @@ Login feature for multi-modular test application using clean architecture and da
 - Eventually app will be ripped out into its own module
 - view/data/domain are feature level
 - All classes not used outside of module must be marked internal
+- Project is using this server https://github.com/kursivee/login-server
 
 https://proandroiddev.com/kotlin-clean-architecture-1ad42fcd97fa
 
