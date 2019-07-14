@@ -47,9 +47,7 @@ class LoginFragment : Fragment() {
             viewModel.success.observe(this, Observer {
                 view.findViewById<TextView>(R.id.tv_message).text = it.toString()
             })
-            // Double calling to check if caching is called
-            viewModel.authenticate("", "").toString()
-            viewModel.authenticate("", "").toString()
+            viewModel.authenticate("user2", "wererser").toString()
         }
     }
 

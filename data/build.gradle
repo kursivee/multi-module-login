@@ -34,6 +34,7 @@ dependencies {
     implementation project(":core-domain")
 
     implementation 'com.google.dagger:dagger:2.23.2'
+    implementation "com.squareup.retrofit2:retrofit:2.6.0"
     kapt 'com.google.dagger:dagger-compiler:2.23.2'
 
     implementation 'androidx.appcompat:appcompat:1.0.2'

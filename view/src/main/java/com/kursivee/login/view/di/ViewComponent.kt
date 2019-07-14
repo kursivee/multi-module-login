@@ -11,7 +11,8 @@ import dagger.Component
         ViewModelModule::class,
         RepositoryModule::class,
         UseCaseModule::class,
-        CacheModule::class
+        CacheModule::class,
+        ApiModule::class
     ]
 )
 @FeatureScope
