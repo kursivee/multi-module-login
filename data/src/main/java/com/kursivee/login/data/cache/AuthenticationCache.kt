@@ -1,4 +1,4 @@
-package com.kursivee.login.domain
+package com.kursivee.login.data.cache
 
 import com.kursivee.core.domain.Cache
 import com.kursivee.login.domain.model.AuthenticationResponse

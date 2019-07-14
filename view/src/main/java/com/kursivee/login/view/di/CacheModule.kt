@@ -1,7 +1,7 @@
 package com.kursivee.login.view.di
 
 import com.kursivee.core.domain.Cache
-import com.kursivee.login.domain.AuthenticationCache
+import com.kursivee.login.data.cache.AuthenticationCache
 import dagger.Module
 import dagger.Provides
 
