@@ -4,8 +4,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.kursivee.core.view.viewmodel.ViewModelFactory
 import com.kursivee.core.view.viewmodel.di.ViewModelKey
+import com.kursivee.login.dux.LoginViewModel
 import com.kursivee.login.view.di.FeatureScope
-import com.kursivee.login.view.viewmodel.LoginViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -19,5 +19,5 @@ internal abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(LoginViewModel::class)
-    internal abstract fun bindLoginViewModel(loginViewModel: LoginViewModel): ViewModel
+    internal abstract fun bindLoginVM(loginViewModel: LoginViewModel): ViewModel
 }

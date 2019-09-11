@@ -5,5 +5,5 @@ import com.kursivee.core.domain.Either
 import com.kursivee.login.domain.model.AuthenticationResponse
 
 interface Repository {
-    suspend fun realAuth(username: String, password: String): Either<Error, AuthenticationResponse>
+    suspend fun auth(username: String, password: String): Either<Error, AuthenticationResponse>
 }

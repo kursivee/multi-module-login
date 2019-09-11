@@ -8,5 +8,5 @@ import com.kursivee.login.domain.model.AuthenticationRequest
 
 class AuthenticateUseCase(private val repository: Repository): UseCase<AuthenticationResponse, AuthenticationRequest>() {
     override suspend fun execute(params: AuthenticationRequest): Either<Error, AuthenticationResponse> =
-        repository.realAuth(params.username, params.password)
+        repository.auth(params.username, params.password)
 }

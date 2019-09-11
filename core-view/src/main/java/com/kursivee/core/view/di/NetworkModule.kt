@@ -10,7 +10,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 object NetworkModule {
     @Provides
     @JvmStatic
-    fun provideRetrofit(client: OkHttpClient) = Retrofit.Builder()
+    fun provideRetrofit(client: OkHttpClient): Retrofit = Retrofit.Builder()
         .client(client)
         .baseUrl("http://10.0.2.2:8080/")
         .addConverterFactory(MoshiConverterFactory.create())
@@ -18,5 +18,5 @@ object NetworkModule {
 
     @Provides
     @JvmStatic
-    fun provideOkHttpClient() = OkHttpClient.Builder().build()
+    fun provideOkHttpClient(): OkHttpClient = OkHttpClient.Builder().build()
 }
