@@ -5,7 +5,8 @@ data class LoginState(
     val password: String = "",
     val token: String = "",
     val success: Boolean = false,
-    val loading: Boolean = false
+    val loading: Boolean = false,
+    val isAuthorized: Boolean = false
 )
 
 data class MutableLoginState(
