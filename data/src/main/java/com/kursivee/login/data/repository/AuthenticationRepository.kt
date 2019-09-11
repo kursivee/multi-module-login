@@ -8,6 +8,7 @@ import com.kursivee.login.data.cache.AuthenticationCache
 import com.kursivee.login.domain.Repository
 import com.kursivee.login.domain.model.AuthenticationResponse
 import com.kursivee.login.domain.model.AuthenticationRequest
+import com.kursivee.login.domain.model.AuthorizeResponse
 import kotlinx.coroutines.delay
 import javax.inject.Inject
 
@@ -36,4 +37,14 @@ class AuthenticationRepository @Inject constructor(
 //            }
         }
     }
+
+    override suspend fun authorize(token: String): Either<Error, AuthorizeResponse> =
+        authCache.getAuthorizeResponse()?.let {
+            Either.Success(it)
+        } ?: run {
+            delay(1000)
+            Either.Success(AuthorizeResponse(true)).also {
+                authCache.put(it.success)
+            }
+        }
 }
